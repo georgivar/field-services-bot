@@ -22,6 +22,8 @@
 <script src="https://web-chat.nativechat.com/2.6.3/sdk/nativechat.js"></script>
     <link href="https://web-chat.nativechat.com/2.6.3/sdk/nativechat.css" rel="stylesheet" type="text/css">
     <div id="chat"></div>
+<script src="https://web-chat.nativechat.com/2.7.2/sdk/nativechat.js"></script>
+    <link href="https://web-chat.nativechat.com/2.7.2/sdk/nativechat.css" rel="stylesheet" type="text/css">
     <script>
   var chatSettings = {
     bot: {
@@ -37,18 +39,14 @@
     }
   };
 
-  const load = () => {
-      window.NativeChat.load({
-      id: "kcChatWindow",
-      origin: "",
-      display: {
-        mode: "inline",
-        containerId: "chat"
-      },
-      chat: chatSettings
-    });
-  };
-  window.onload = load;
+  window.NativeChat.load({
+    id: "kcChatWindow",
+    origin: "",
+    display: {
+        mode: "modal"
+    },
+    chat: chatSettings
+  });
 </script>
 </body>
 </html>
